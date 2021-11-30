@@ -1,0 +1,14 @@
+{
+  "name": "my-kanban-app",
+  "version": "0.0.1",
+  "description": "Personal Kanban App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Nayaab Khan <nayaab@hey.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.2"
+  }
+}
