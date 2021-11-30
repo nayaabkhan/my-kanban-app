@@ -7,6 +7,6 @@ tag app
 
 	<self>
 		<p> "Edit {<code> "app/client.imba"} and save to reload"
-		<a href="https://imba.io"> "Learn Imba"
+		<a href="https://imba.io" target="_blank"> "Learn Imba"
 
 imba.mount <app>

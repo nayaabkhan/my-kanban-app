@@ -1,5 +1,5 @@
 const path = require("path");
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, shell } = require("electron");
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -12,6 +12,11 @@ const createWindow = () => {
   });
 
   win.loadURL("http://localhost:3000");
+
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    shell.openExternal(url);
+    return { action: "deny" };
+  });
 };
 
 app.whenReady().then(() => {
