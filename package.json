@@ -2,7 +2,7 @@
   "name": "my-kanban-app",
   "version": "0.0.1",
   "description": "Personal Kanban App",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron ."
   },
