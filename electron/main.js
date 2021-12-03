@@ -1,5 +1,6 @@
 const path = require("path");
 const { app, BrowserWindow, shell } = require("electron");
+const { watch } = require("../app/fileSystem");
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -17,14 +18,18 @@ const createWindow = () => {
     shell.openExternal(url);
     return { action: "deny" };
   });
+
+  return win;
 };
 
 app.whenReady().then(() => {
-  createWindow();
+  const win = createWindow();
 
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
+
+  watch(win);
 });
 
 app.on("window-all-closed", () => {

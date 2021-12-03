@@ -12,6 +12,7 @@
   "author": "Nayaab Khan <nayaab@hey.com>",
   "license": "MIT",
   "dependencies": {
+    "chokidar": "^3.5.2",
     "express": "^4.17.1",
     "imba": "^2.0.0-alpha.190"
   },
