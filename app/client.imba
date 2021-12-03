@@ -21,8 +21,9 @@ tag kb-app
 
 	def setup
 		projects = window.api.getProjects!
-		window.api.onNewProject insertProject
-		window.api.onRemoveProject removeProject
+		# TODO: any way to shorten the do(x) fn(x) syntax?
+		window.api.onNewProject do(project) insertProject(project)
+		window.api.onRemoveProject do(project) removeProject(project)
 
 	def createProject
 		window.api.createProject(newProjectText)
