@@ -2,12 +2,14 @@
   "name": "my-kanban-app",
   "version": "0.0.1",
   "description": "Personal Kanban App",
-  "main": "app/electron/main.js",
+  "main": "dist/app/electron/main.loader.js",
   "scripts": {
-    "start": "imba -w app/server.imba",
-    "build": "imba build app/server.imba",
-    "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
-    "electron": "wait-on tcp:3000 && electron ."
+    "watch-renderer": "imba -w app/server.imba",
+    "build-renderer": "imba build app/server.imba",
+    "watch-electron": "imba build -wM --no-hashing app/electron/main.imba",
+    "build-electron": "imba build -m --no-hashing app/electron/main.imba",
+    "electron": "wait-on tcp:3000 && electron .",
+    "dev": "concurrently -k npm:watch-renderer npm:watch-electron npm:electron"
   },
   "author": "Nayaab Khan <nayaab@hey.com>",
   "license": "MIT",
