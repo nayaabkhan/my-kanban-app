@@ -2,7 +2,7 @@
   "name": "my-kanban-app",
   "version": "0.0.1",
   "description": "Personal Kanban App",
-  "main": "electron/main.js",
+  "main": "app/electron/main.js",
   "scripts": {
     "start": "imba -w app/server.imba",
     "build": "imba build app/server.imba",

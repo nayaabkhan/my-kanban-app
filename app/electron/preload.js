@@ -1,5 +1,5 @@
 const { ipcRenderer, contextBridge } = require("electron");
-const { getProjects, createProject } = require("../app/fileSystem");
+const { getProjects, createProject } = require("../fileSystem");
 
 window.addEventListener("DOMContentLoaded", () => {
   for (const dependency of ["chrome", "node", "electron"]) {

@@ -1,6 +1,6 @@
 const path = require("path");
 const { app, BrowserWindow, shell } = require("electron");
-const { watch } = require("../app/fileSystem");
+const { watch } = require("../fileSystem");
 
 const createWindow = () => {
   const win = new BrowserWindow({
