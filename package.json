@@ -4,8 +4,8 @@
   "description": "Personal Kanban App",
   "main": "electron/main.js",
   "scripts": {
-    "start": "imba -w server.imba",
-    "build": "imba build server.imba",
+    "start": "imba -w app/server.imba",
+    "build": "imba build app/server.imba",
     "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
     "electron": "wait-on tcp:3000 && electron ."
   },
